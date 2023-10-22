@@ -1,6 +1,6 @@
 import java.util.Scanner;
 class BankAccount {
-    private double balance;
+    double balance;
 
     public BankAccount(double initialBalance) {
         balance = initialBalance;
@@ -23,12 +23,10 @@ class BankAccount {
     }
 }
 class ATM {
-    private BankAccount account;
-
-    public ATM(BankAccount bankAccount) {
-        account = bankAccount;
+    BankAccount account;
+    public ATM(BankAccount account) {
+        this.account = account;
     }
-
     public void displayMenu() {
         System.out.println("ATM Menu:");
         System.out.println("1. Check Balance");
@@ -39,7 +37,6 @@ class ATM {
 
     public void run() {
         Scanner ob = new Scanner(System.in);
-
         while (true) {
             displayMenu();
             System.out.print("Select an option: ");
